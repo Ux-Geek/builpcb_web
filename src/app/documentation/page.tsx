@@ -1,12 +1,13 @@
 import React from "react";
 import type { Metadata } from "next";
+import DocumentationClient from "./DocumentationClient";
 
 export const metadata: Metadata = {
   title: "Documentation | BuildPCBs.com",
-  description: "There are currently no documentation pages available.",
+  description: "High-performance hardware manufacturing powered by AI. Design, simulate, validate, and ship production-ready PCBs in record time.",
   openGraph: {
     title: "Documentation | BuildPCBs.com",
-    description: "There are currently no documentation pages available.",
+    description: "High-performance hardware manufacturing powered by AI. Design, simulate, validate, and ship production-ready PCBs in record time.",
     url: "https://buildpcbs.com/documentation",
     siteName: "BuildPCBs.com",
     images: [
@@ -22,31 +23,13 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Documentation | BuildPCBs.com",
-    description: "There are currently no documentation pages available.",
+    description: "High-performance hardware manufacturing powered by AI. Design, simulate, validate, and ship production-ready PCBs in record time.",
     images: ["/og-image.png"],
-  },
-  alternates: {
-    canonical: "https://buildpcbs.com/documentation",
-  },
-  robots: {
-    index: true,
-    follow: true,
   },
 };
 
 const DocumentationPage = () => {
-  return (
-    <section className="w-full min-h-screen flex items-center justify-center bg-white dark:bg-black">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-          Documentation
-        </h1>
-        <p className="text-lg text-gray-600 dark:text-gray-400">
-          There are currently no documentation pages available.
-        </p>
-      </div>
-    </section>
-  );
+  return <DocumentationClient />;
 };
 
 export default DocumentationPage;

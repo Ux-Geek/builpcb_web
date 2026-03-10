@@ -48,6 +48,11 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* Navbar Variables */
+  --navbar-bg: rgba(255, 255, 255, 0.8);
+  --navbar-border: rgba(220, 220, 220, 0.5);
+  --navbar-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 @theme inline {
@@ -128,6 +133,11 @@ body {
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+
+  /* Navbar Variables - Dark Mode */
+  --navbar-bg: rgba(23, 23, 23, 0.85);
+  --navbar-border: rgba(63, 63, 70, 0.5);
+  --navbar-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
 }
 
 @layer base {
@@ -137,4 +147,20 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logo-carousel {
+  display: flex;
+  animation: slide 30s linear infinite; /* Adjust duration as needed */
+  width: max-content; /* Allow content to dictate width */
+  padding-right: 100%; /* To ensure smooth looping */
 }

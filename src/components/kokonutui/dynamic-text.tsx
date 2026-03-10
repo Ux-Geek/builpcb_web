@@ -15,13 +15,16 @@ import { motion, AnimatePresence } from "motion/react";
 
 interface DynamicTextProps {
   staticPrefix?: string;
+  staticSuffix?: string;
   dynamicTexts?: string[];
   interval?: number;
   className?: string;
+  dynamicClassName?: string;
 }
 
 const DynamicText = ({
   staticPrefix = "Design and build circuit boards with ",
+  staticSuffix = "",
   dynamicTexts = [
     "plain English.",
     "text.",
@@ -30,6 +33,7 @@ const DynamicText = ({
   ],
   interval = 4000,
   className = "",
+  dynamicClassName = "",
 }: DynamicTextProps = {}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(true);
@@ -80,11 +84,12 @@ const DynamicText = ({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="inline-block text-black dark:text-white"
+            className={`inline-block text-black dark:text-white ${dynamicClassName}`}
           >
             {dynamicTexts[currentIndex]}
           </motion.span>
         </AnimatePresence>
+        {staticSuffix}
       </div>
     </div>
   );

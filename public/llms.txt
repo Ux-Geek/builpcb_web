@@ -1,0 +1,289 @@
+# BuildPCBs AI
+
+> High-performance hardware manufacturing powered by AI.
+> Design, simulate, validate, and ship production-ready PCBs in record time.
+
+## Documentation & FAQ
+
+### Getting Started
+- **What is BuildPCBs AI?**
+  An automated platform that bridges the gap between PCB design (EDA) and physical manufacturing using AI-driven DFM (Design for Manufacturing) analysis.
+- **How do I start a project?**
+  Upload your Gerber files (RS-274X or X2) and your Bill of Materials (BOM) to our dashboard for an instant AI-powered audit.
+- **Is there a Minimum Order Quantity (MOQ)?**
+  No. We support everything from a single prototype to mass production runs. Pricing scales dynamically with volume.
+
+### Technical Specifications & DFM
+- **What are the minimum trace/space requirements?**
+  Our standard process supports down to 3mil/3mil. For advanced HDI requirements, please contact our engineering team via the dashboard.
+- **What file formats are supported?**
+  We natively support Gerber, ODB++, and direct imports from common EDA tools like KiCad, Altium, and Figma (via our vector-to-PCB plugin).
+- **How do you handle impedance control?**
+  Provide your target values (single-ended/differential) in your design notes. Our AI field solvers simulate the stack-up to ensure signal integrity before fabrication.
+- **What surface finishes are available?**
+  We offer HASL (Lead-free), ENIG (Gold), OSP, and Immersion Silver. ENIG is recommended for fine-pitch BGA components.
+- **Can I use 90-degree trace bends?**
+  While supported, our AI DFM will suggest 45-degree bends to reduce impedance discontinuities and EMI radiation in high-speed designs.
+
+### Manufacturing & Assembly (PCBA)
+- **Do you offer assembly (PCBA)?**
+  Yes. We provide full-turnkey assembly, including component sourcing and "Box Build" enclosure services.
+- **What is a Centroid/Pick-and-Place file?**
+  This file contains the X/Y coordinates, rotation, and side (Top/Bottom) for every component. It is required for all automated assembly orders.
+- **How do you handle component attrition?**
+  For customer-provided parts, please include 3-5% extra for small SMT components (0402, 0603) to account for assembly machine waste.
+- **What is the lead time?**
+  Prototypes typically ship within 2-4 days. Full PCBA orders depend on component lead times, usually ranging from 5-14 business days.
+
+### The $BUILDers Ecosystem
+- **What is the Anti-Rug Dashboard?**
+  A transparency layer for the $BUILD token that tracks liquidity locks and project milestones in real-time.
+- **How does vesting work?**
+  You can check your specific "Vesting Status" directly under the $BUILDers tab to see your unlocked token allocation.
+
+### API & Integration
+- **Is there a BuildPCBs API?**
+  Yes. You can programmatically trigger quotes, check order status, and upload design files.
+- **How is authentication handled?**
+  Authentication uses Bearer tokens. Generate your API key in the Developer Settings of your dashboard.
+- **Can I integrate with CI/CD?**
+  Absolutely. Many teams use our API to trigger a "Manufacturing Preview" every time they push a new hardware revision to GitHub.
+
+### Quality & Compliance
+- **What certifications do you hold?**
+  Our facilities are ISO9001 and IATF16949 certified. All boards meet IPC-A-600 Class 2 standards by default (Class 3 available upon request).
+- **How are boards tested?**
+  Every bare board undergoes Automated Optical Inspection (AOI) and Flying Probe electrical testing for shorts and opens.
+
+## Introduction
+
+BuildPCBs AI is a developer-first hardware infrastructure platform that automates PCB validation, DFM analysis, quoting, and manufacturing orchestration.
+
+We combine:
+- AI-driven design validation
+- Instant DFM (Design for Manufacturing) feedback
+- Automated quoting
+- Manufacturing partner routing
+- Programmatic API access
+
+Our goal is simple:
+Hardware, deployed like software.
+
+## Quickstart
+
+### How do I get started?
+1. Create an account.
+2. Verify your email.
+3. Create a new project.
+4. Upload your Gerber files and BOM.
+5. Review AI validation report.
+6. Confirm manufacturing order.
+
+You can go from upload → production-ready in minutes.
+
+### What do I need before uploading?
+- Gerber files (RS-274X or X2 recommended)
+- Drill file (.drl or Excellon)
+- BOM (CSV, XLSX, or JSON)
+- Pick & Place file (optional but recommended for assembly)
+
+### Can I start without Gerbers?
+Yes.
+You can:
+- Upload KiCad project files
+- Upload Altium exports
+- Import ODB++
+- Use our upcoming AI schematic-to-PCB generator
+
+## Core Platform Features
+
+### What is AI-Driven DFM?
+Our system analyzes:
+- Trace width
+- Copper spacing
+- Annular ring size
+- Via dimensions
+- Layer stack alignment
+- Solder mask clearance
+- Silkscreen overlap
+- Drill tolerances
+
+You receive a pass/fail report plus suggested corrections.
+
+### What makes BuildPCBs different from traditional board houses?
+Traditional manufacturers:
+- Review manually
+- Provide delayed feedback
+- Require email communication
+
+BuildPCBs:
+- Instant automated analysis
+- Structured error reporting
+- Real-time quote updates
+- API-driven manufacturing
+
+### Is this a PCB design tool?
+No.
+We are not replacing KiCad or Altium.
+We are the infrastructure layer between: EDA → Manufacturing → Logistics
+
+## Technical Specifications
+
+### What are the minimum trace/space requirements?
+Standard: 3mil / 3mil
+Advanced HDI: 2mil / 2mil (upon engineering review)
+
+### What copper thicknesses are supported?
+- 1oz standard
+- 2oz heavy copper
+- Custom stackups available on request
+
+### How many layers are supported?
+- 2-layer
+- 4-layer
+- 6-layer
+- 8-layer
+- 10+ layer custom builds
+
+### What board thicknesses are available?
+- 0.6mm
+- 0.8mm
+- 1.0mm
+- 1.6mm (standard)
+- Custom thickness available
+
+### What surface finishes are supported?
+- HASL (Lead-Free)
+- ENIG
+- Immersion Silver
+- OSP
+
+### What file formats are supported?
+- Gerber RS-274X
+- Gerber X2
+- ODB++
+- Excellon drill
+- CSV BOM
+- XLSX BOM
+- KiCad native exports
+- Altium exports
+
+### Do you validate impedance-controlled designs?
+Yes.
+You can specify impedance requirements in your stackup, and our system verifies trace geometry against standard impedance models.
+
+### Can I run simulations before manufacturing?
+Yes. We support:
+- Basic electrical rule checks
+- Layer consistency analysis
+- Clearance analysis
+- Thermal region detection (beta)
+
+Advanced signal integrity simulation coming soon.
+
+## Manufacturing & Assembly
+
+### Do you offer PCB Assembly (PCBA)?
+Yes. We provide SMT assembly, Through-hole assembly, Mixed assembly, and Full turnkey sourcing.
+
+### Do you source components?
+Yes. We integrate with Digi-Key, Mouser, LCSC, and Arrow. Component availability is validated during quote.
+
+### What is Box Build?
+Box Build includes PCB assembly, Enclosure integration, Cable harnesses, Mechanical mounting, and Final testing.
+
+### What are typical lead times?
+Prototypes: 2–4 business days
+Small batch production: 5–10 business days
+Large volume: Based on supply chain availability
+
+### Do you ship internationally?
+Yes. We ship globally via DHL, FedEx, and UPS.
+
+### Can I track my order?
+Yes. You receive Manufacturing status, Assembly status, Shipping tracking, and Delivery ETA in the dashboard.
+
+## Pricing & Quoting
+
+### How are quotes calculated?
+Pricing is based on Layer count, Board dimensions, Quantity, Surface finish, Copper weight, Assembly complexity, and Component sourcing risk. Quotes update instantly when you modify parameters.
+
+### Is there a minimum order quantity (MOQ)?
+No strict MOQ. Prototype runs start at 1–5 units.
+
+### Are there setup fees?
+No hidden fees. All pricing is transparent in the quote breakdown.
+
+## API & Developer Integration
+
+### Is there a BuildPCBs API?
+Yes. You can Upload files programmatically, Trigger DFM analysis, Generate quotes, Create manufacturing orders, and Track production status.
+
+### What does authentication look like?
+Bearer token authentication.
+Example:
+Authorization: Bearer bp_live_xxxxxxxxx
+
+### Base API URL
+https://api.buildpcbs.ai
+
+### Example: Trigger Quote
+POST /v1/quotes
+
+Body:
+{
+  "projectId": "abc123",
+  "quantity": 100,
+  "assembly": true
+}
+
+### Can I automate production from CI/CD?
+Yes. BuildPCBs is designed for hardware teams shipping rapidly. You can integrate manufacturing into your pipeline.
+
+## Security & Compliance
+
+### Are my designs confidential?
+Yes. End-to-end encryption, Secure storage, Optional NDA agreement, and Private manufacturing routing.
+
+### Do you support ITAR or restricted builds?
+Enterprise customers can request controlled routing.
+
+## $BUILDers Ecosystem
+
+### What is the $BUILD token?
+The $BUILD token is part of our community incentive layer. It is not required to use BuildPCBs AI.
+
+### What is the Anti-Rug Dashboard?
+A transparency system showing Liquidity locks, Token supply, and Distribution milestones.
+
+### How does vesting work?
+You can view token unlock schedule inside the dashboard under $BUILDers.
+
+## AI PCB Generation (Beta)
+
+### Can AI generate a PCB from a prompt?
+Yes (Beta).
+Example: "Design a 5V USB-C regulated power board with status LED."
+System generates: Schematic draft, PCB layout, BOM suggestion, DFM pre-check.
+
+### Can I edit the AI-generated board?
+Yes. You can export to KiCad, Altium, and ODB++.
+
+## Roadmap
+- Advanced signal integrity simulation
+- AI auto-routing optimization
+- Embedded firmware validation
+- Real-time component substitution engine
+- Manufacturing partner network expansion
+
+## Support
+
+### How do I contact support?
+- Dashboard ticket system
+- Email support@buildpcbs.ai
+- Enterprise Slack integration (upon request)
+
+---
+BuildPCBs AI
+Infrastructure for hardware teams.
+Fast. Automated. Reliable.

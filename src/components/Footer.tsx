@@ -62,6 +62,11 @@ const Footer = () => {
         <h3 className="font-medium text-lg">Support</h3>
         <ul className="mt-4 space-y-2">
           <li>
+            <a href="/documentation" className="text-base font-normal hover:opacity-80">
+              Documentation
+            </a>
+          </li>
+          <li>
             <a href="/faq" className="text-base font-normal hover:opacity-80">
               FAQ
             </a>
@@ -114,6 +119,35 @@ const Footer = () => {
               <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.644-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.44-1.441-1.44z" />
             </svg>
           </a>
+          <a
+            href="https://dexscreener.com/solana/G2aXNcUo4rDbYjWpHou44TB4bwvc1qYhFuE4mPPNpump"
+            aria-label="DEX Screener"
+            className="hover:opacity-80"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div className="mt-4">
+          <p className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-1">
+            Contract Address (CA):
+          </p>
+          <code className="text-xs bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded select-all break-all">
+            G2aXNcUo4rDbYjWpHou44TB4bwvc1qYhFuE4mPPNpump
+          </code>
         </div>
       </div>
       {/* <div>
@@ -196,6 +230,11 @@ const Footer = () => {
           <h3 className="font-medium text-lg text-black">Support</h3>
           <ul className="mt-4 space-y-2">
             <li>
+              <a href="/documentation" className="text-base font-normal hover:opacity-80">
+                Documentation
+              </a>
+            </li>
+            <li>
               <a href="/faq" className="text-base font-normal hover:opacity-80">
                 FAQ
               </a>
@@ -240,6 +279,35 @@ const Footer = () => {
                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.644-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.44-1.441-1.44z" />
               </svg>
             </a>
+            <a
+              href="https://dexscreener.com/solana/G2aXNcUo4rDbYjWpHou44TB4bwvc1qYhFuE4mPPNpump"
+              aria-label="DEX Screener"
+              className="hover:opacity-80"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"
+                />
+              </svg>
+            </a>
+          </div>
+          <div className="mt-4">
+            <p className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-1">
+              Contract Address (CA):
+            </p>
+            <code className="text-xs bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded select-all break-all block">
+              G2aXNcUo4rDbYjWpHou44TB4bwvc1qYhFuE4mPPNpump
+            </code>
           </div>
         </div>
         {/* <div>
@@ -264,7 +332,7 @@ const Footer = () => {
   const copyrightSection = (
     <div className="w-full mt-8 md:mt-12 pt-8 text-center text-sm">
       <div className="flex flex-col md:flex-row md:justify-between items-center gap-4">
-        <p>&copy; 2025 buildpcbs. All rights reserved.</p>
+        <p>&copy; 2026 buildpcbs. All rights reserved.</p>
         <div className="flex items-center space-x-6">
           <a href="/terms" className="hover:opacity-80">
             Terms of Service
@@ -281,7 +349,7 @@ const Footer = () => {
   );
 
   return (
-    <footer className="my-12 w-full">
+    <footer className="mt-4 mb-12 w-full">
       {/* Blue container */}
       <div className="bg-[#0038DF] w-full md:max-w-6xl md:mx-auto md:rounded-[44px] p-8">
         <CTA />

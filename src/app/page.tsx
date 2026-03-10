@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import LandingPageClient from "./LandingPageClient"; // Assuming the main page component was renamed
+import { WaitlistProvider } from "@/context/WaitlistContext";
 
 export const metadata: Metadata = {
   title: "BuildPCBs | The AI + Web3 Hardware Network",
@@ -81,5 +82,10 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <LandingPageClient />;
+  return (
+    <WaitlistProvider>
+      <LandingPageClient />
+    </WaitlistProvider>
+  );
 }
+
